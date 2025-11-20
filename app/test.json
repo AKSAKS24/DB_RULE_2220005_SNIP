@@ -1,0 +1,9 @@
+{
+    "pgm_name": "ZTEST_RULE_2220005_COMBINED",
+    "inc_name": "ZTEST_RULE_2220005_COMB_INC",
+    "type": "PROG",
+    "name": "MAIN_BLOCK",
+    "start_line": 5,
+    "end_line": 200,
+    "code": "DATA lt_konv TYPE TABLE OF konv.\nDATA ls_konv TYPE konv.\nDATA lt_prcd TYPE TABLE OF prcd_elements.\nDATA ls_prcd TYPE prcd_elements.\nDATA lv_cnt TYPE dzaehk.\nDATA lv_head TYPE dzaehko.\nDATA lv_cnt_ok TYPE vfprc_cond_count.\nDATA lv_head_ok TYPE vfprc_cond_count_head.\nSELECT * FROM konv INTO TABLE lt_konv.\nSELECT * FROM prcd_elements INTO TABLE lt_prcd.\nUPDATE konv SET kbetr = kbetr WHERE knumv = '0000000001'.\nINSERT konv FROM ls_konv.\nDELETE FROM konv WHERE knumv = '0000000002'.\n"
+}
